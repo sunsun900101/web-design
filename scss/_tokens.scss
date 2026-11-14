@@ -1,0 +1,63 @@
+/* =================================
+   CSS Variables / Design Tokens
+================================= */
+
+/* --- Collection: Palette Tokens | Mode: Mode 1 --- */
+:root {
+
+  /* Colors */
+  /* Palettetokens */
+  /* Brand */
+    --color-palettetokens-brand-linen: #f7f5f0;
+    --color-palettetokens-brand-sand: #e8e4dd;
+    --color-palettetokens-brand-stone: #5e5a53;
+    --color-palettetokens-brand-ink: #33332f;
+  /* Neutral */
+    --color-palettetokens-neutral-n0: #ffffff;
+    --color-palettetokens-neutral-n10: #fbfbfb;
+    --color-palettetokens-neutral-n20: #f7f7f7;
+    --color-palettetokens-neutral-n30: #efefee;
+    --color-palettetokens-neutral-n40: #e4e4e4;
+    --color-palettetokens-neutral-n50: #cccccb;
+    --color-palettetokens-neutral-n60: #c0c0bf;
+    --color-palettetokens-neutral-n70: #b6b6b4;
+    --color-palettetokens-neutral-n80: #a9a9a8;
+    --color-palettetokens-neutral-n90: #9d9d9b;
+    --color-palettetokens-neutral-n100: #91918f;
+    --color-palettetokens-neutral-n200: #858582;
+    --color-palettetokens-neutral-n300: #787876;
+    --color-palettetokens-neutral-n400: #6e6e6b;
+    --color-palettetokens-neutral-n500: #62625f;
+    --color-palettetokens-neutral-n600: #585854;
+    --color-palettetokens-neutral-n700: #494946;
+    --color-palettetokens-neutral-n800: #3d3d39;
+    --color-palettetokens-neutral-n900: #33332f;
+}
+
+/* --- Collection: Semantic | Mode: Mode 1 --- */
+:root {
+
+  /* Colors */
+  /* Border */
+    --color-border-primary: var(--color-palettetokens-neutral-n600);
+    --color-border-secondary: var(--color-palettetokens-neutral-n300);
+    --color-border-light: var(--color-palettetokens-neutral-n30);
+  /* Button */
+    --color-button-primary: var(--color-palettetokens-brand-stone);
+    --color-button-secondary: var(--color-palettetokens-brand-sand);
+    --color-button-primary-hover: var(--color-palettetokens-neutral-n100);
+  /* Icon */
+    --color-icon-icon-primary: var(--color-palettetokens-brand-stone);
+    --color-icon-icon-secondary: var(--color-palettetokens-brand-sand);
+  /* Surface */
+    --color-surface-primary: var(--color-palettetokens-brand-linen);
+    --color-surface-secondary: var(--color-palettetokens-brand-sand);
+    --color-surface-default: var(--color-palettetokens-neutral-n0);
+    --color-surface-dark: var(--color-palettetokens-brand-stone);
+  /* Text */
+    --color-text-brand: var(--color-palettetokens-brand-ink);
+    --color-text-secondary: var(--color-palettetokens-neutral-n700);
+    --color-text-light: var(--color-palettetokens-neutral-n10);
+}
+
+
