@@ -17,7 +17,6 @@ var swiper = new Swiper('.headerSwiper', {
     },
 
     
-
     autoplay: {
         delay: 3000,
         disableOnInteraction: false,
@@ -33,4 +32,27 @@ var swiper = new Swiper('.headerSwiper', {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
+});
+
+
+$(function () {
+    const $home = $('.home');
+
+    if ($home.length > 0) {
+        const observer = new IntersectionObserver( (entries) => {
+
+            const isVisble = entries[0].isIntersecting;
+
+            $home.toggleClass('is-visible', isVisble);
+            
+        },
+
+        {
+            threshold: 0,
+            rootMargin: '-35% 0px -35% 0px',
+        }
+    );
+        observer.observe($home[0]);
+    }
+
 });

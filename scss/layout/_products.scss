@@ -1,0 +1,21 @@
+.products{
+    height: 100svh;
+    width: 100%;
+    background-color: var(--color-palettetokens-neutral-n0);
+    position: relative;
+    isolation: isolate;
+}
+.products:before{
+    position: absolute;
+    content: "";
+    inset: 0;
+
+    background-image: url("../images/noise.svg");
+    background-repeat: repeat;
+    background-size: 200px 200px;
+
+    filter: grayscale(100%);
+    opacity: 0.75;
+    pointer-events: none;
+    z-index: -1;
+}
