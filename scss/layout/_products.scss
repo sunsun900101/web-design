@@ -1,7 +1,9 @@
 .products{
-    height: 100svh;
+    min-height: 100svh;
     width: 100%;
     background-color: var(--color-palettetokens-neutral-n0);
+    padding-block: 10rem;
+
     position: relative;
     isolation: isolate;
 }
@@ -18,4 +20,25 @@
     opacity: 0.75;
     pointer-events: none;
     z-index: -1;
+}
+
+.product-card{
+
+    img{
+        width: 100%;
+        display: block;
+        max-width: 100%;
+        height: auto;
+
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        
+        box-shadow: 3px 8px 16px #00000033;
+        transition: transform 0.5s ease;
+        
+        &:hover{
+            transform: translateY(-5px);
+            box-shadow: 3px 8px 28px #00000066;
+        }
+    }
 }

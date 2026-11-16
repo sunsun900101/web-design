@@ -13642,9 +13642,10 @@ header .headerSwiper .swiper-slide .swiper-content {
 }
 
 .products {
-  height: 100svh;
+  min-height: 100svh;
   width: 100%;
   background-color: var(--color-palettetokens-neutral-n0);
+  padding-block: 10rem;
   position: relative;
   isolation: isolate;
 }
@@ -13661,4 +13662,26 @@ header .headerSwiper .swiper-slide .swiper-content {
   opacity: 0.75;
   pointer-events: none;
   z-index: -1;
+}
+
+.product-card img {
+  width: 100%;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-box-shadow: 3px 8px 16px rgba(0, 0, 0, 0.2);
+          box-shadow: 3px 8px 16px rgba(0, 0, 0, 0.2);
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+.product-card img:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  -webkit-box-shadow: 3px 8px 28px rgba(0, 0, 0, 0.4);
+          box-shadow: 3px 8px 28px rgba(0, 0, 0, 0.4);
 }/*# sourceMappingURL=all.css.map */
