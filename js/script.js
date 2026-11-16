@@ -55,4 +55,27 @@ $(function () {
         observer.observe($home[0]);
     }
 
+
+
+
+
+    const $magazine = $('.magazine');
+
+    if ($magazine.length > 0) {
+        const observer = new IntersectionObserver( (entries) => {
+
+            const isVisble = entries[0].isIntersecting;
+
+            $magazine.toggleClass('is-visible', isVisble);
+            
+        },
+
+        {
+            threshold: 0,
+            rootMargin: '-35% 0px -35% 0px',
+        }
+    );
+        observer.observe($magazine[0]);
+    }
+
 });
