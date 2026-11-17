@@ -56,26 +56,43 @@ $(function () {
     }
 
 
+    const $products = $('.products-heading');
 
-
-
-    const $magazine = $('.magazine');
-
-    if ($magazine.length > 0) {
+    if ($products.length > 0) {
         const observer = new IntersectionObserver( (entries) => {
 
             const isVisble = entries[0].isIntersecting;
 
-            $magazine.toggleClass('is-visible', isVisble);
+            $products.toggleClass('is-visible', isVisble);
             
         },
 
         {
-            threshold: 0,
-            rootMargin: '-35% 0px -35% 0px',
+            threshold: 0
         }
     );
-        observer.observe($magazine[0]);
+        observer.observe($products[0]);
+    }
+
+
+
+
+    const $magazineAbout = $('.magazine-about');
+
+    if ($magazineAbout.length > 0) {
+
+        const observer = new IntersectionObserver((entries) => {
+
+            const isVisible = entries[0].isIntersecting;
+
+            $magazineAbout.toggleClass('is-visible', isVisible);
+
+        }, {
+            threshold: 0,
+            rootMargin: '-35% 0px -35% 0px',
+        });
+
+        observer.observe($magazineAbout[0]);
     }
 
 });

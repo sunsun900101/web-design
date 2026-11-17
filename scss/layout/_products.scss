@@ -23,7 +23,6 @@
 }
 
 .product-card{
-
     img{
         width: 100%;
         display: block;
@@ -39,6 +38,31 @@
         &:hover{
             transform: translateY(-5px);
             box-shadow: 3px 8px 28px #00000066;
+        }
+    }
+}
+
+.products-heading{
+    position: relative;
+
+    .product-image-decoline{
+        width: clamp(2.5rem, 6vw, 6rem);
+        height: auto;
+        position: absolute;
+        top: -1rem;
+        right: 25%;
+
+        pointer-events: none;
+
+        clip-path: inset(0 100% 0 0);
+        transition: none;
+        z-index: 0;
+    }
+
+    &.is-visible{
+        .product-image-decoline{
+            clip-path: inset(0 0 0 0);
+            transition: clip-path 0.5s ease-in-out;
         }
     }
 }

@@ -28,7 +28,11 @@ body:before{
 
     position: relative;
     isolation: isolate;
+
+    display: flex;
+    flex-direction: column;
 }
+
 .footer:before{
     position: absolute;
     content: "";
@@ -47,18 +51,19 @@ body:before{
 .footer > .container{
     display: flex;
     flex-direction: column;
-    min-height: 100svh;
+    flex: 1;
+    min-height: 0;
 }
 
 .footer .row {
     flex: 1;
-    align-items: center;
+    align-items: stretch;
 }
 
 .footer-img{
 
     img{
-        width: 128px;
+        width: 192px;
         height: auto;
 
         @media (min-width: 576px) {

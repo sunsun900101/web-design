@@ -2,7 +2,7 @@
     min-height: 100svh;
     width: 100%;
     background-color: var(--color-palettetokens-neutral-n0);
-    padding-block: 10rem;
+    padding-bottom: 10rem;
 
     position: relative;
     isolation: isolate;
@@ -17,7 +17,7 @@
     background-size: 200px 200px;
 
     filter: grayscale(100%);
-    opacity: 0.75;
+    opacity: 0.25;
     pointer-events: none;
     z-index: -1;
 }
@@ -45,6 +45,14 @@
         text-orientation: upright;
 
         position: absolute;
+        top: 40%;
+        left: 5%;
+    }
+    @media (min-width: 1440px) {
+        writing-mode: vertical-lr;
+        text-orientation: upright;
+
+        position: absolute;
         top: 60%;
         left: 5%;
     }
@@ -55,34 +63,35 @@
     border-left: 2px solid var(--color-palettetokens-neutral-n300);
 }
 
-.magazine{
+
+
+.magazine-about {
     position: relative;
+    isolation: isolate;
+}
 
-    .magazine-image-decoline{
-        width: 15%;
-        height: auto;
-        position: absolute;
-        bottom: 5%;
-        right: 5%;
+.magazine-about > .magazine-image-decoline {
+    width: clamp(5.5rem, 15vw, 18rem);
+    height: auto;
 
-        pointer-events: none;
+    position: absolute;
+    top: 50%;
+    right: 4%;
 
-        clip-path: inset(0 0 100% 0);
-        transition: none;
-    }
+    z-index: 2;
+    pointer-events: none;
 
-    &.is-visible{
-        .magazine-image-decoline{
-            clip-path: inset(0 0 0 0);
-            transition: clip-path 1.5s ease-in-out;
-        }
-    }
+    clip-path: inset(0 0 100% 0);
+    transition: none;
+}
+
+.magazine-about.is-visible > .magazine-image-decoline {
+    clip-path: inset(0);
+    transition: clip-path 1.5s ease-out;
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .magazine .magazine-image-decoline,
-    .magazine.is-visible 
-    .magazine-image-decoline{
+    .magazine-about > .magazine-image-decoline {
         clip-path: none;
         transition: none;
     }
