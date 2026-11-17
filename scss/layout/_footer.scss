@@ -23,7 +23,7 @@ body:before{
     min-height: 100svh;
     width: 100%;
     background-color: var(--color-palettetokens-brand-linen);
-    padding-block: 5rem;
+    padding-block: 2.5rem;
     margin-top: 15rem;
 
     position: relative;
@@ -42,4 +42,30 @@ body:before{
     opacity: 0.5;
     pointer-events: none;
     z-index: -1;
+}
+
+.footer > .container{
+    display: flex;
+    flex-direction: column;
+    min-height: 100svh;
+}
+
+.footer .row {
+    flex: 1;
+    align-items: center;
+}
+
+.footer-img{
+
+    img{
+        width: 128px;
+        height: auto;
+
+        @media (min-width: 576px) {
+            width: 256px;
+        }
+        @media (min-width: 992px) {
+            width: 512px;
+        }
+    }
 }

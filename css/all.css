@@ -13937,7 +13937,7 @@ body:before {
   min-height: 100svh;
   width: 100%;
   background-color: var(--color-palettetokens-brand-linen);
-  padding-block: 5rem;
+  padding-block: 2.5rem;
   margin-top: 15rem;
   position: relative;
   isolation: isolate;
@@ -13955,4 +13955,39 @@ body:before {
   opacity: 0.5;
   pointer-events: none;
   z-index: -1;
+}
+
+.footer > .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100svh;
+}
+
+.footer .row {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer-img img {
+  width: 128px;
+  height: auto;
+}
+@media (min-width: 576px) {
+  .footer-img img {
+    width: 256px;
+  }
+}
+@media (min-width: 992px) {
+  .footer-img img {
+    width: 512px;
+  }
 }/*# sourceMappingURL=all.css.map */
