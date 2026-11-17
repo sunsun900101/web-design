@@ -1,0 +1,45 @@
+body{
+    background-color: var(--color-palettetokens-neutral-n0);
+
+    position: relative;
+    isolation: isolate;
+}
+body:before{
+    position: absolute;
+    content: "";
+    inset: 0;
+
+    background-image: url("../images/noise.svg");
+    background-repeat: repeat;
+    background-size: 200px 200px;
+
+    filter: grayscale(100%);
+    opacity: 0.25;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.footer{
+    min-height: 100svh;
+    width: 100%;
+    background-color: var(--color-palettetokens-brand-linen);
+    padding-block: 5rem;
+    margin-top: 15rem;
+
+    position: relative;
+    isolation: isolate;
+}
+.footer:before{
+    position: absolute;
+    content: "";
+    inset: 0;
+
+    background-image: url("../images/noise.svg");
+    background-repeat: repeat;
+    background-size: 200px 200px;
+
+    filter: grayscale(100%);
+    opacity: 0.5;
+    pointer-events: none;
+    z-index: -1;
+}

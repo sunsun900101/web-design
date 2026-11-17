@@ -45,12 +45,13 @@
         text-orientation: upright;
 
         position: absolute;
-        top: 45%;
+        top: 60%;
         left: 5%;
     }
 }
 
 .magazine-content{
+    padding-block: 10rem;
     border-left: 2px solid var(--color-palettetokens-neutral-n300);
 }
 

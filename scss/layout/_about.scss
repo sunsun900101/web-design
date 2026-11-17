@@ -3,6 +3,7 @@
     width: 100%;
     background-color: var(--color-palettetokens-neutral-n0);
     padding-block: 10rem;
+    margin-top: 10rem;
 
     position: relative;
     isolation: isolate;
@@ -24,9 +25,11 @@
 
 .text-content{
     min-height: 50svh;
+    padding-block: 8rem;
     background-color: var(--color-palettetokens-brand-linen);
     position: relative;
     isolation: isolate;
+    z-index: 1;
 
         &:before{
         position: absolute;
@@ -42,4 +45,85 @@
         pointer-events: none;
         z-index: -1;
     }
+}
+.about-images{
+
+    img{
+        display: block;
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+        position: absolute;
+        z-index: 2;
+    }
+
+    .about-img-1{
+        left: 5%;
+        top: 35%;
+        width: 33%;
+        aspect-ratio: 3 / 4;
+        box-shadow: 3px 8px 16px #00000033;
+        transition: transform 0.5s ease;
+        
+        &:hover{
+            transform: translateY(-5px);
+            box-shadow: 3px 8px 28px #00000066;
+        }
+
+        @media (min-width: 470px) {
+            left: 1%;
+            top: 30%;
+        }
+
+        @media (min-width: 576px) {
+            left: 5%;
+            top: 25%;
+        }
+
+        @media (min-width: 768px){
+            left: 3%;
+            top: 10%;
+        }
+        @media (min-width: 992px){
+            left: 1%;
+            top: 10%;
+        }
+        
+    }
+
+    .about-img-2{
+        left: 20%;
+        top: 50%;
+        width: 28%;
+        aspect-ratio: 1 / 1;
+        box-shadow: -10px -8px 16px #00000033;
+        transition: transform 0.5s ease;
+        
+        &:hover{
+            transform: translateY(-5px);
+            box-shadow: 3px 8px 28px #00000066;
+        }
+
+        @media (min-width: 470px) {
+            left: 15%;
+            top: 50%;
+        }
+
+        @media (min-width: 576px) {
+            left: 20%;
+            top: 50%;
+        }
+
+        @media (min-width: 768px){
+            left: 70%;
+            top: 68%;
+        }
+
+        @media (min-width: 992px){
+            left: 70%;
+            top: 60%;
+        }
+        
+    }
+
 }

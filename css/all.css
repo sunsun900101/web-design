@@ -13542,6 +13542,7 @@ header .headerSwiper .swiper-slide .swiper-content {
 }
 
 .home {
+  min-height: 100svh;
   width: 100%;
   background-color: var(--color-palettetokens-neutral-n0);
   position: relative;
@@ -13734,12 +13735,13 @@ header .headerSwiper .swiper-slide .swiper-content {
             writing-mode: vertical-lr;
     text-orientation: upright;
     position: absolute;
-    top: 45%;
+    top: 60%;
     left: 5%;
   }
 }
 
 .magazine-content {
+  padding-block: 10rem;
   border-left: 2px solid var(--color-palettetokens-neutral-n300);
 }
 
@@ -13776,6 +13778,7 @@ header .headerSwiper .swiper-slide .swiper-content {
   width: 100%;
   background-color: var(--color-palettetokens-neutral-n0);
   padding-block: 10rem;
+  margin-top: 10rem;
   position: relative;
   isolation: isolate;
 }
@@ -13796,9 +13799,11 @@ header .headerSwiper .swiper-slide .swiper-content {
 
 .text-content {
   min-height: 50svh;
+  padding-block: 8rem;
   background-color: var(--color-palettetokens-brand-linen);
   position: relative;
   isolation: isolate;
+  z-index: 1;
 }
 .text-content:before {
   position: absolute;
@@ -13810,6 +13815,144 @@ header .headerSwiper .swiper-slide .swiper-content {
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
   opacity: 0.75;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.about-images img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  z-index: 2;
+}
+.about-images .about-img-1 {
+  left: 5%;
+  top: 35%;
+  width: 33%;
+  aspect-ratio: 3/4;
+  -webkit-box-shadow: 3px 8px 16px rgba(0, 0, 0, 0.2);
+          box-shadow: 3px 8px 16px rgba(0, 0, 0, 0.2);
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+.about-images .about-img-1:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  -webkit-box-shadow: 3px 8px 28px rgba(0, 0, 0, 0.4);
+          box-shadow: 3px 8px 28px rgba(0, 0, 0, 0.4);
+}
+@media (min-width: 470px) {
+  .about-images .about-img-1 {
+    left: 1%;
+    top: 30%;
+  }
+}
+@media (min-width: 576px) {
+  .about-images .about-img-1 {
+    left: 5%;
+    top: 25%;
+  }
+}
+@media (min-width: 768px) {
+  .about-images .about-img-1 {
+    left: 3%;
+    top: 10%;
+  }
+}
+@media (min-width: 992px) {
+  .about-images .about-img-1 {
+    left: 1%;
+    top: 10%;
+  }
+}
+.about-images .about-img-2 {
+  left: 20%;
+  top: 50%;
+  width: 28%;
+  aspect-ratio: 1/1;
+  -webkit-box-shadow: -10px -8px 16px rgba(0, 0, 0, 0.2);
+          box-shadow: -10px -8px 16px rgba(0, 0, 0, 0.2);
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+.about-images .about-img-2:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  -webkit-box-shadow: 3px 8px 28px rgba(0, 0, 0, 0.4);
+          box-shadow: 3px 8px 28px rgba(0, 0, 0, 0.4);
+}
+@media (min-width: 470px) {
+  .about-images .about-img-2 {
+    left: 15%;
+    top: 50%;
+  }
+}
+@media (min-width: 576px) {
+  .about-images .about-img-2 {
+    left: 20%;
+    top: 50%;
+  }
+}
+@media (min-width: 768px) {
+  .about-images .about-img-2 {
+    left: 70%;
+    top: 68%;
+  }
+}
+@media (min-width: 992px) {
+  .about-images .about-img-2 {
+    left: 70%;
+    top: 60%;
+  }
+}
+
+body {
+  background-color: var(--color-palettetokens-neutral-n0);
+  position: relative;
+  isolation: isolate;
+}
+
+body:before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background-image: url("../images/noise.svg");
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  opacity: 0.25;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.footer {
+  min-height: 100svh;
+  width: 100%;
+  background-color: var(--color-palettetokens-brand-linen);
+  padding-block: 5rem;
+  margin-top: 15rem;
+  position: relative;
+  isolation: isolate;
+}
+
+.footer:before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background-image: url("../images/noise.svg");
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  opacity: 0.5;
   pointer-events: none;
   z-index: -1;
 }/*# sourceMappingURL=all.css.map */
